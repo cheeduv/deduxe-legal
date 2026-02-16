@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - Deduxe</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #0F1120;
+      color: #CBD5E1;
+      line-height: 1.75;
+    }
+    a { color: #10B981; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    header .hdr { max-width: 960px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 24px; font-weight: 700; color: #fff; }
+    .logo span { color: #10B981; }
+    nav a { margin-left: 24px; font-size: 14px; color: #94A3B8; }
+    nav a:hover { color: #10B981; }
+
+    .content { padding: 48px 0 80px; }
+    h1 { font-size: 32px; color: #fff; margin-bottom: 8px; }
+    .subtitle { font-size: 16px; color: #94A3B8; margin-bottom: 40px; }
+    h2 { font-size: 22px; color: #fff; margin: 40px 0 20px; }
+    p { margin-bottom: 16px; font-size: 15px; }
+
+    .faq-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+    }
+    .faq-q {
+      font-size: 16px;
+      font-weight: 600;
+      color: #E2E8F0;
+      margin-bottom: 8px;
+    }
+    .faq-a {
+      font-size: 14px;
+      color: #94A3B8;
+      line-height: 1.7;
+    }
+
+    .contact-card {
+      background: rgba(16, 185, 129, 0.06);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .contact-card h3 {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .contact-card p {
+      color: #94A3B8;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    .contact-btn {
+      display: inline-block;
+      background: #10B981;
+      color: #fff;
+      padding: 12px 32px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .contact-btn:hover { background: #059669; text-decoration: none; }
+
+    .bug-section {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+    .bug-section h3 {
+      font-size: 16px;
+      color: #E2E8F0;
+      margin-bottom: 12px;
+    }
+    .bug-section ul {
+      margin: 0 0 0 20px;
+      font-size: 14px;
+      color: #94A3B8;
+    }
+    .bug-section li { margin-bottom: 6px; }
+
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+      font-size: 12px;
+      color: #64748B;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hdr">
+      <a href="index.html" class="logo">Dedu<span>xe</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="container">
+
+      <h1>Support</h1>
+      <p class="subtitle">We're here to help you get the most out of Deduxe.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">How does receipt scanning work?</div>
+        <div class="faq-a">Point your camera at a receipt and Deduxe uses AI-powered OCR to automatically extract the vendor name, amount, date, and category. Most processing happens on your device for speed and privacy. For complex documents, a cloud OCR service may be used for better accuracy.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How accurate is mileage tracking?</div>
+        <div class="faq-a">Deduxe uses GPS with Kalman filtering and road-snapping technology to provide accurate mileage readings. For best results, ensure location permissions are set to "Always Allow" and keep your phone charged. GPS accuracy can vary based on environmental conditions (tunnels, dense urban areas, poor weather).</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Does mileage tracking drain my battery?</div>
+        <div class="faq-a">Deduxe uses a two-tier GPS system: low-power mode when you're stationary, and high-accuracy mode only while driving. This significantly reduces battery usage compared to always-on GPS tracking.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How do I classify trips as business or personal?</div>
+        <div class="faq-a">Go to the Miles tab and tap "Classify Trips." You'll see a card for each unclassified trip — swipe right for business, left for personal. Over time, Deduxe learns your patterns and auto-classifies trips for you.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How do I export my data for tax filing?</div>
+        <div class="faq-a">Go to the Home screen, then navigate to Export. You can generate a CSV file (compatible with TurboTax, QuickBooks, and Xero) or a ZIP file that includes receipt images alongside the CSV. Exports can cover any date range or tax year.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Where is my data stored?</div>
+        <div class="faq-a">All your data is stored locally on your device. If you enable cloud backup, your data is backed up to your own Google Drive, Dropbox, or iCloud account — we never store your data on our servers.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What health accounts does Deduxe support?</div>
+        <div class="faq-a">Deduxe supports FSA (Flexible Spending Account), HSA (Health Savings Account), HRA (Health Reimbursement Arrangement), and DCFSA (Dependent Care FSA). You can track balances, contribution limits, and eligible expenses for each account.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I cancel my subscription?</div>
+        <div class="faq-a">Yes. Subscriptions are managed through the Apple App Store or Google Play Store. To cancel, go to your device's subscription settings (not within the Deduxe app). Your subscription remains active until the end of the current billing period.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Is Deduxe a tax filing service?</div>
+        <div class="faq-a">No. Deduxe is a tax deduction tracking and organizational tool. It helps you capture and organize your deductions throughout the year so you're prepared at tax time. You'll still need to file your taxes through TurboTax, a CPA, or another filing service.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How do I delete my data?</div>
+        <div class="faq-a">You can delete individual documents, trips, or health account records within the App. To delete all data, uninstall the App — since data is stored locally on your device, uninstalling removes everything. Note: cloud backups must be deleted separately through your cloud storage provider.</div>
+      </div>
+
+      <h2>Report a Bug</h2>
+
+      <div class="bug-section">
+        <h3>When reporting a bug, please include:</h3>
+        <ul>
+          <li>Your device model and operating system version</li>
+          <li>What you were doing when the issue occurred</li>
+          <li>What you expected to happen vs. what actually happened</li>
+          <li>Screenshots if possible (do not include sensitive financial information)</li>
+          <li>Whether the issue is reproducible (can you make it happen again?)</li>
+        </ul>
+      </div>
+
+      <div class="contact-card">
+        <h3>Need Help?</h3>
+        <p>Can't find what you're looking for? Send us an email and we'll get back to you as soon as possible.</p>
+        <a class="contact-btn" href="mailto:venugopal.cheedu@gmail.com">Email Support</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      &copy; 2025-2026 YKMV Group LLC. All rights reserved.
+      &nbsp;|&nbsp; <a href="privacy.html">Privacy</a>
+      &nbsp;|&nbsp; <a href="terms.html">Terms</a>
+    </div>
+  </footer>
+
+</body>
+</html>

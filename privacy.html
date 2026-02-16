@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Deduxe</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #0F1120;
+      color: #CBD5E1;
+      line-height: 1.75;
+    }
+    a { color: #10B981; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    header .hdr { max-width: 960px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 24px; font-weight: 700; color: #fff; }
+    .logo span { color: #10B981; }
+    nav a { margin-left: 24px; font-size: 14px; color: #94A3B8; }
+    nav a:hover { color: #10B981; }
+
+    .content { padding: 48px 0 80px; }
+    h1 { font-size: 32px; color: #fff; margin-bottom: 8px; }
+    .effective { font-size: 14px; color: #64748B; margin-bottom: 40px; }
+    h2 { font-size: 20px; color: #fff; margin: 36px 0 12px; }
+    h3 { font-size: 16px; color: #E2E8F0; margin: 24px 0 8px; }
+    p { margin-bottom: 16px; font-size: 15px; }
+    ul { margin: 0 0 16px 24px; font-size: 15px; }
+    li { margin-bottom: 6px; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    th { color: #E2E8F0; font-weight: 600; }
+
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+      font-size: 12px;
+      color: #64748B;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hdr">
+      <a href="index.html" class="logo">Dedu<span>xe</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="container">
+
+      <h1>Privacy Policy</h1>
+      <p class="effective">Effective Date: February 16, 2026 &nbsp;|&nbsp; Last Updated: February 16, 2026</p>
+
+      <p>YKMV Group LLC ("we," "us," or "our") operates the Deduxe mobile application (the "App"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App. Please read this policy carefully. If you do not agree with the terms of this Privacy Policy, please do not use the App.</p>
+
+      <h2>1. Information We Collect</h2>
+
+      <h3>1.1 Information You Provide Directly</h3>
+      <ul>
+        <li><strong>Account &amp; Tax Profile:</strong> Employment type, filing status, and income range you enter during setup.</li>
+        <li><strong>Receipt &amp; Document Data:</strong> Photos of receipts, invoices, and tax documents you scan or import. This includes vendor names, amounts, dates, and categories extracted via OCR processing.</li>
+        <li><strong>Mileage Data:</strong> Trip start/end locations, routes, distances, and trip purpose classifications you provide.</li>
+        <li><strong>Health Account Data:</strong> FSA, HSA, HRA, and DCFSA account names, balances, contribution limits, and medical expense records you enter.</li>
+        <li><strong>Manual Entries:</strong> Any information you manually input, including trip details, document fields, and notes.</li>
+      </ul>
+
+      <h3>1.2 Information Collected Automatically</h3>
+      <ul>
+        <li><strong>Location Data:</strong> When you enable mileage tracking, the App collects GPS coordinates in the background to record your trips. This data is processed on your device and stored locally. You can disable location tracking at any time through the App or your device settings.</li>
+        <li><strong>Device Information:</strong> Device model, operating system version, and unique device identifiers for crash reporting and analytics.</li>
+        <li><strong>Usage Analytics:</strong> App interaction events (screens viewed, features used, session duration) to improve the App experience. This data is collected in aggregate and is not used to personally identify you.</li>
+      </ul>
+
+      <h3>1.3 Information from Third-Party Services</h3>
+      <ul>
+        <li><strong>Cloud Storage Providers:</strong> If you connect Google Drive, Dropbox, or iCloud for backups, we receive an authentication token to access only the storage space needed for your Deduxe backups. We do not access any other files in your cloud storage accounts.</li>
+        <li><strong>Subscription Data:</strong> RevenueCat processes your subscription transactions. We receive subscription status (active, expired, trial) but do not receive or store your payment card information.</li>
+      </ul>
+
+      <h2>2. How We Process Your Data</h2>
+
+      <h3>2.1 On-Device Processing</h3>
+      <p>The majority of your data is processed and stored <strong>locally on your device</strong>. This includes:</p>
+      <ul>
+        <li><strong>OCR Processing:</strong> Receipt and document text extraction is primarily performed on-device using Google ML Kit. Your receipt images are processed locally and the extracted text is stored in your device's local database.</li>
+        <li><strong>Mileage Tracking:</strong> All GPS processing, Kalman filtering, trip detection, and route calculation occurs entirely on your device.</li>
+        <li><strong>Trip Classification ML:</strong> The machine learning model that learns your business vs. personal trip patterns runs entirely on your device. No trip classification data is sent to any server.</li>
+        <li><strong>Database:</strong> All your documents, trips, health accounts, and settings are stored in an on-device database (WatermelonDB/SQLite).</li>
+        <li><strong>Search Index:</strong> Full-text search indexing operates entirely on your device.</li>
+      </ul>
+
+      <h3>2.2 Cloud Processing (Limited)</h3>
+      <p>In specific cases, data may be sent to third-party services for processing:</p>
+
+      <table>
+        <tr>
+          <th>Service</th>
+          <th>Data Sent</th>
+          <th>Purpose</th>
+        </tr>
+        <tr>
+          <td>Mindee API</td>
+          <td>Receipt/document images (only when on-device OCR confidence is low)</td>
+          <td>Enhanced text extraction for complex documents</td>
+        </tr>
+        <tr>
+          <td>Mapbox</td>
+          <td>GPS coordinate traces (after trip completion)</td>
+          <td>Road-snapping to improve mileage accuracy</td>
+        </tr>
+        <tr>
+          <td>Google Maps</td>
+          <td>GPS coordinates</td>
+          <td>Map display and reverse geocoding (converting coordinates to addresses)</td>
+        </tr>
+        <tr>
+          <td>RevenueCat</td>
+          <td>Anonymous user ID, subscription events</td>
+          <td>Subscription management and purchase validation</td>
+        </tr>
+        <tr>
+          <td>Expo</td>
+          <td>Device info, crash reports</td>
+          <td>App updates and crash reporting</td>
+        </tr>
+      </table>
+
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Provide and maintain the App's core functionality (receipt scanning, mileage tracking, tax deduction calculations, health account management)</li>
+        <li>Generate tax reports and exports at your request</li>
+        <li>Improve the App through aggregated, anonymized usage analytics</li>
+        <li>Send you tax deadline reminders and deduction tips (which you can disable)</li>
+        <li>Process your subscription and manage your account</li>
+        <li>Diagnose technical issues and fix bugs</li>
+      </ul>
+
+      <h2>4. What We Do NOT Do</h2>
+      <ul>
+        <li>We do <strong>not sell</strong> your personal information to third parties.</li>
+        <li>We do <strong>not use</strong> your data for third-party advertising.</li>
+        <li>We do <strong>not share</strong> your receipt, mileage, health, or financial data with any third party except as described in Section 2.2 above for core App functionality.</li>
+        <li>We do <strong>not train</strong> AI or machine learning models on your personal data outside of the on-device trip classification model that benefits only you.</li>
+        <li>We do <strong>not access</strong> your cloud storage accounts beyond the specific backup folder used by Deduxe.</li>
+      </ul>
+
+      <h2>5. Data Storage and Security</h2>
+
+      <h3>5.1 Local Storage</h3>
+      <p>Your data is stored in an encrypted local database on your device. Authentication tokens for cloud services are stored using the platform's secure storage (iOS Keychain / Android Keystore via expo-secure-store), which provides hardware-backed encryption.</p>
+
+      <h3>5.2 Cloud Backups</h3>
+      <p>If you enable cloud backup, your data is uploaded to <strong>your own</strong> cloud storage account (Google Drive, Dropbox, or iCloud). We do not operate our own cloud servers for storing your data. Your backups reside in storage accounts you own and control.</p>
+
+      <h3>5.3 Security Measures</h3>
+      <ul>
+        <li>OAuth 2.0 with PKCE for all third-party authentication</li>
+        <li>Encrypted token storage (expo-secure-store)</li>
+        <li>No plaintext storage of credentials or tokens</li>
+        <li>HTTPS for all network communications</li>
+        <li>On-device processing by default to minimize data transmission</li>
+      </ul>
+
+      <h2>6. Data Retention and Deletion</h2>
+      <ul>
+        <li><strong>Your Data, Your Control:</strong> All data stored on your device remains there until you delete it through the App or uninstall the App.</li>
+        <li><strong>Cloud Backups:</strong> Deleting data in the App does not automatically delete cloud backups. You can delete cloud backups through your cloud storage provider.</li>
+        <li><strong>Account Deletion:</strong> You can delete all App data by using the in-app data management features or by uninstalling the App. Since we do not maintain server-side accounts, uninstalling removes all locally stored data.</li>
+        <li><strong>Analytics Data:</strong> Aggregated, anonymized analytics data may be retained for up to 24 months for product improvement purposes.</li>
+      </ul>
+
+      <h2>7. Your Rights</h2>
+
+      <h3>7.1 All Users</h3>
+      <p>You have the right to:</p>
+      <ul>
+        <li><strong>Access:</strong> View all data the App has stored about you (available through the App's Library and Settings).</li>
+        <li><strong>Delete:</strong> Remove any or all of your data from the App.</li>
+        <li><strong>Export:</strong> Export your data in standard formats (CSV, ZIP) at any time.</li>
+        <li><strong>Opt Out:</strong> Disable location tracking, analytics, and notifications through the App or device settings.</li>
+        <li><strong>Disconnect:</strong> Revoke cloud storage access at any time through the App's settings.</li>
+      </ul>
+
+      <h3>7.2 California Residents (CCPA/CPRA)</h3>
+      <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act and California Privacy Rights Act:</p>
+      <ul>
+        <li><strong>Right to Know:</strong> You may request details about the categories and specific pieces of personal information we have collected.</li>
+        <li><strong>Right to Delete:</strong> You may request deletion of your personal information.</li>
+        <li><strong>Right to Opt-Out of Sale:</strong> We do not sell personal information. No action is needed.</li>
+        <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights.</li>
+      </ul>
+      <p>To exercise these rights, contact us at <a href="mailto:venugopal.cheedu@gmail.com">venugopal.cheedu@gmail.com</a>.</p>
+
+      <h3>7.3 European Economic Area Residents (GDPR)</h3>
+      <p>If you are in the EEA, our legal basis for processing your data is:</p>
+      <ul>
+        <li><strong>Contract Performance:</strong> Processing necessary to provide the App's services you requested.</li>
+        <li><strong>Legitimate Interest:</strong> Aggregated analytics to improve the App.</li>
+        <li><strong>Consent:</strong> Location tracking (which you explicitly enable) and cloud storage connections.</li>
+      </ul>
+      <p>You have the right to access, rectify, erase, restrict processing, data portability, and to withdraw consent at any time. To exercise these rights, contact us at <a href="mailto:venugopal.cheedu@gmail.com">venugopal.cheedu@gmail.com</a>.</p>
+
+      <h2>8. Children's Privacy</h2>
+      <p>The App is not directed at individuals under the age of 13 (or 16 in the EEA). We do not knowingly collect personal information from children. If we learn that we have collected data from a child under the applicable age, we will delete that information promptly. If you believe a child has provided us with personal information, please contact us at <a href="mailto:venugopal.cheedu@gmail.com">venugopal.cheedu@gmail.com</a>.</p>
+
+      <h2>9. Third-Party Links and Services</h2>
+      <p>The App may contain links to third-party websites or services (such as the App Store, Google Play, or cloud storage providers). We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies.</p>
+
+      <h2>10. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy within the App and updating the "Last Updated" date above. Your continued use of the App after such changes constitutes your acceptance of the revised policy.</p>
+
+      <h2>11. Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, your data, or your privacy rights, please contact us:</p>
+      <ul>
+        <li><strong>YKMV Group LLC</strong></li>
+        <li>Email: <a href="mailto:venugopal.cheedu@gmail.com">venugopal.cheedu@gmail.com</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      &copy; 2025-2026 YKMV Group LLC. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

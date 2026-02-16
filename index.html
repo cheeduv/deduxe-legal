@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deduxe - AI Tax Deduction Tracker for Freelancers</title>
+  <meta name="description" content="Deduxe is an AI-powered tax deduction tracker for freelancers and 1099 workers. Scan receipts, track mileage, manage health accounts, and maximize your tax savings.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #0F1120;
+      color: #E2E8F0;
+      line-height: 1.6;
+    }
+    a { color: #10B981; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 24px; font-weight: 700; color: #fff; }
+    .logo span { color: #10B981; }
+    nav a { margin-left: 24px; font-size: 14px; color: #94A3B8; }
+    nav a:hover { color: #10B981; }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: #10B981; }
+    .hero p {
+      font-size: 18px;
+      color: #94A3B8;
+      max-width: 600px;
+      margin: 0 auto 36px;
+    }
+    .badge-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      color: #10B981;
+      font-size: 15px;
+    }
+
+    /* Features */
+    .features {
+      padding: 60px 0;
+    }
+    .features h2 {
+      text-align: center;
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 48px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 32px 24px;
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(16, 185, 129, 0.12);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    .feature-card h3 {
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      font-size: 14px;
+      color: #94A3B8;
+    }
+
+    /* Pricing */
+    .pricing {
+      padding: 60px 0;
+      text-align: center;
+    }
+    .pricing h2 {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .pricing .subtitle {
+      color: #94A3B8;
+      margin-bottom: 36px;
+    }
+    .price-card {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.06);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 20px;
+      padding: 40px 48px;
+      text-align: center;
+    }
+    .price-amount {
+      font-size: 48px;
+      font-weight: 800;
+      color: #10B981;
+    }
+    .price-amount span { font-size: 18px; font-weight: 400; color: #94A3B8; }
+    .price-note {
+      color: #94A3B8;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    /* Disclaimer banner */
+    .disclaimer {
+      background: rgba(251, 191, 36, 0.08);
+      border: 1px solid rgba(251, 191, 36, 0.2);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 48px auto;
+      max-width: 720px;
+      font-size: 13px;
+      color: #FBBF24;
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .footer-links a { font-size: 14px; color: #94A3B8; }
+    .footer-links a:hover { color: #10B981; }
+    .footer-legal {
+      font-size: 12px;
+      color: #64748B;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">Dedu<span>xe</span></div>
+      <nav>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>The tax deduction tracker<br>that <span>pays for itself</span></h1>
+      <p>Scan receipts, track mileage, manage health accounts, and find every deduction you're owed. Built for freelancers, 1099 workers, and the self-employed.</p>
+      <div class="badge-row">
+        <a class="badge" href="https://apps.apple.com/app/deduxe-tax-deduction-ai/id6756696483">Download on the App Store</a>
+        <a class="badge" href="#">Coming Soon on Google Play</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h2>Everything You Need to Maximize Deductions</h2>
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">&#128247;</div>
+          <h3>Smart Receipt Scanner</h3>
+          <p>AI-powered OCR extracts vendor, amount, date, and category from receipts in seconds. Real-time scan quality coaching ensures every capture is usable. Duplicate detection prevents double entries.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">&#128663;</div>
+          <h3>Automatic Mileage Tracking</h3>
+          <p>Background GPS tracking with Kalman filtering and road-snapping for accurate mileage. Swipe to classify trips as business or personal. On-device ML learns your patterns over time.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">&#128203;</div>
+          <h3>Document Library</h3>
+          <p>Full-text searchable vault for all your receipts and tax documents. Filter by category, sort by date or amount, and export in bulk. Your documents, organized and audit-ready.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">&#127973;</div>
+          <h3>Health Account Hub</h3>
+          <p>Track FSA, HSA, HRA, and Dependent Care FSA accounts with IRS contribution limits. Auto-detect health-eligible receipts when scanning. Never leave benefits money on the table.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">&#128200;</div>
+          <h3>Tax Savings Dashboard</h3>
+          <p>See your year-to-date tax savings at a glance. Morning briefings, financial health rings, and savings celebrations keep you motivated to track every deduction.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">&#128230;</div>
+          <h3>Tax-Ready Exports</h3>
+          <p>Export your deductions as CSV for TurboTax, or as a ZIP with receipt images for your CPA. QuickBooks and Xero compatible. Multi-year support included.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <div class="container">
+      <h2>Simple Pricing</h2>
+      <p class="subtitle">Find more deductions than you pay for the app &mdash; or it's not worth it.</p>
+      <div class="price-card">
+        <div class="price-amount">$59.99 <span>/year</span></div>
+        <p class="price-note">That's $5/month. The average freelancer misses $5,000+ in deductions per year.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="disclaimer">
+      <strong>Important Disclaimer:</strong> Deduxe is a tax deduction tracking and organizational tool. It does not provide tax, legal, or financial advice. Deduction calculations, mileage tracking, OCR results, and tax rate information are provided for informational purposes only and may contain errors. Always consult a qualified tax professional before making tax filing decisions. YKMV Group LLC is not responsible for any tax filing outcomes based on information provided by this application.
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:venugopal.cheedu@gmail.com">Contact</a>
+      </div>
+      <p class="footer-legal">
+        &copy; 2025-2026 YKMV Group LLC. All rights reserved. Deduxe is a registered trademark of YKMV Group LLC.
+        Apple and the Apple logo are trademarks of Apple Inc. Google Play is a trademark of Google LLC.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
